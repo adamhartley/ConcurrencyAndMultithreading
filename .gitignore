@@ -1,0 +1,25 @@
+# IntelliJ
+.idea/
+*.iml
+.gradle/
+build
+gradle
+
+#Eclipse
+*.classpath
+*.project
+*.factorypath
+bin/
+.recommenders/
+
+# VSCode
+.vscode
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
