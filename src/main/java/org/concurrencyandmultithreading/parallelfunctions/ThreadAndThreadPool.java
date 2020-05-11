@@ -56,12 +56,10 @@ public class ThreadAndThreadPool {
     }
 
     public static void exCreatingThreadsWithThreadFactory() {
-        ThreadFactory threadFactory = new ThreadFactory() {
-            @Override public Thread newThread(final Runnable r) {
-                Thread thread = new Thread(r);
-                thread.setPriority(Thread.MAX_PRIORITY);
-                return thread;
-            }
+        ThreadFactory threadFactory = r -> {
+            Thread thread = new Thread(r);
+            thread.setPriority(Thread.MAX_PRIORITY);
+            return thread;
         };
 
         ExecutorService pool = Executors.newFixedThreadPool(5, threadFactory);
